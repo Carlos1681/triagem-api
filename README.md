@@ -2,15 +2,11 @@
 
 Projeto do **Desafio Técnico – IA e Automação (KODIE)**. Uma API em FastAPI usa IA para classificar mensagens de clientes, e um fluxo no Make encaminha cada mensagem para o setor responsável.
 
-## 1. Apresentação da Ideia
-
-> ✏️ **Preencha com suas palavras.** Sugestão: conte que você já viu (ou imaginou) pequenas empresas em que uma pessoa lê cada mensagem do WhatsApp/e-mail e repassa manualmente aos setores, e que isso é lento e sujeito a erros. A ideia nasceu de querer automatizar essa triagem.
-
-## 2. Problema Escolhido
+## 1. Problema Escolhido
 
 **Caso 4.1 – Classificação de Mensagens.** Uma pequena empresa recebe diariamente dúvidas, solicitações e reclamações. Hoje alguém precisa ler tudo, identificar o assunto e encaminhar manualmente. Isso consome tempo e dificulta a organização dos atendimentos.
 
-## 3. Solução Proposta
+## 2. Solução Proposta
 
 1. A mensagem chega ao **Make** (via webhook).
 2. O Make chama a **API** (`POST /classificar`).
@@ -24,17 +20,17 @@ Projeto do **Desafio Técnico – IA e Automação (KODIE)**. Uma API em FastAPI
 
 Categorias → setores: `duvida → Atendimento`, `reclamacao → SAC`, `solicitacao → Operações`, `elogio → Marketing`, `outro` ou confiança baixa → `Triagem manual` (revisão humana).
 
-## 4. Tecnologias Utilizadas
+## 3. Tecnologias Utilizadas
 
 | Camada | Tecnologia |
 |---|---|
 | IA | API da Anthropic (Claude) |
 | Back-end | Python 3.12 + FastAPI + Pydantic |
-| Automação | Make (e, futuramente, n8n) |
+| Automação | Make |
 | Testes | pytest |
 | Extra (opcional) | Docker / Docker Compose |
 
-## 5. Funcionamento do Sistema
+## 4. Funcionamento do Sistema
 
 ### Entrada: `POST /classificar`
 ```json
@@ -66,12 +62,11 @@ O prompt (`app/prompts.py`) define: papel, categorias com definições, critéri
 ```
 
 ### Automação (Make)
-Veja o passo a passo e a lista de prints em [`docs/make-guide.md`](docs/make-guide.md).
 
-### Documentação visual
-> ✏️ Adicione os prints em `docs/prints/` e referencie aqui, com uma breve descrição de cada um (fluxo completo, execução bem-sucedida, configuração de cada módulo e dados de cada etapa).
+<img width="385" height="329" alt="image" src="https://github.com/user-attachments/assets/dba0d109-d543-4892-ade6-550a8dab786e" />
 
-## 6. Como Executar
+
+## 5. Como Executar
 
 ### Pré-requisitos
 Python 3.10+ e uma chave de API da Anthropic.
