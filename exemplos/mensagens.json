@@ -1,0 +1,7 @@
+[
+  {"mensagem": "Qual o prazo de entrega para o Rio de Janeiro?", "remetente": "ana@email.com", "canal": "email"},
+  {"mensagem": "Fui cobrado duas vezes no cartão e ninguém me responde. Se não resolverem hoje vou cancelar tudo!", "remetente": "carlos@email.com", "canal": "whatsapp"},
+  {"mensagem": "Preciso da segunda via do boleto de março, por favor.", "remetente": "maria@email.com", "canal": "site"},
+  {"mensagem": "Adorei o atendimento da Paula, super atenciosa! Obrigado!", "remetente": "joao@email.com", "canal": "email"},
+  {"mensagem": "Ganhe dinheiro rápido clicando neste link", "remetente": "spam@email.com", "canal": "email"}
+]
